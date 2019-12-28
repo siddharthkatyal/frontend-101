@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>B1</title>
+	<link rel="stylesheet" type="text/css" href="b1.css">
+</head>
+<body>
+        <div id="clock"></div>
+        <div id="hourhand"></div>
+        <div id="minutehand"></div>
+        <div id="sechand"></div>
+    <script>
+        setInterval(function(){
+            var d = new Date();
+            var hours = (d.getHours())%12;
+            var minutes = d.getMinutes();
+            var seconds = d.getSeconds();
+            var degreehour = (hours + minutes/60 + seconds/3600)*30;
+            var degreemin = (minutes + seconds/60)*6;
+            var degreesec = seconds*6;
+            var hourhand = document.getElementById("hourhand");
+            var minutehand = document.getElementById("minutehand");
+            var sechand = document.getElementById("sechand");
+            hourhand.style="transform-origin: bottom";
+            hourhand.style.transform = "rotateZ(" + degreehour + "deg)";
+            minutehand.style="transform-origin: bottom";
+            minutehand.style.transform = "rotateZ(" + degreemin + "deg)";
+            sechand.style="transform-origin: bottom";
+            sechand.style.transform = "rotateZ(" + degreesec + "deg)";
+            },10);
+    </script>
+</body>
+</html>

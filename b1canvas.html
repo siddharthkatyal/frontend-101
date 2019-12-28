@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>B1</title>
+	<link rel="stylesheet" type="text/css" href="b1canvas.css">
+</head>
+<body>
+    <canvas>
+    </canvas>
+    <script>
+        const canvas = document.querySelector('canvas')
+        canvas.height=window.innerHeight;
+        canvas.width=window.innerWidth;
+        const c = canvas.getContext('2d');
+        
+        setInterval(function(){
+            var d = new Date();
+            var hours = (d.getHours())%12;
+            var minutes = d.getMinutes();
+            var seconds = d.getSeconds();
+            var radhour = ((hours + minutes/60 + seconds/3600)*30)*Math.PI/180;
+            var radmin = ((minutes + seconds/60)*6)*Math.PI/180;
+            var radsec = (seconds*6)*Math.PI/180;
+            c.clearRect(0,0,window.innerWidth,window.innerHeight);
+            c.beginPath();
+            c.arc(750, 400, 250, 0, Math.PI * 2, false);
+            c.strokeStyle = 'black';
+            c.lineWidth=30;
+            c.stroke();
+            c.fillStyle =  'green';
+            c.fill();
+            c.fillStyle = 'black';
+            c.translate(750,400)
+            c.save();
+            c.rotate(radsec);
+            c.fillRect(-3, -190, 6, 190)
+            c.restore();
+            c.save();
+            c.rotate(radmin);
+            c.fillRect(-4.5, -175, 9, 175)
+            c.restore();
+            c.save();
+            c.rotate(radhour);
+            c.fillRect(-6, -160, 12, 160)
+            c.restore();
+            c.translate(-750,-400)
+            },10);
+    </script>
+</body>
+</html>
