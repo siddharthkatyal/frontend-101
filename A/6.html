@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A6</title>
+	<link rel="stylesheet" type="text/css" href="6.css">
+</head>
+<body>
+    <span id="d1"></span>
+    <span id="d2"></span>
+            <span id="d3"></span>
+            <span id="d4"></span>
+            <span id="d5"></span>
+            <span id="d6"></span>
+            <span id="d7"></span>
+            <span id="d8"></span>
+            <span id="d9"></span>
+            <span id="d10"></span>
+            <span id="d11"></span>
+            <span id="d12"></span>
+            <span id="d13"></span>
+            <span id="d14"></span>
+    <script>
+        var letter = 'd'    
+        document.addEventListener('keyup', e => {
+                if (!e) e = window.event;
+                
+                if (e.keyCode == 39) {
+                    if (letter === 'D') letter = 'V'
+                    else if (letter === 'V') letter = 'M'
+                    else if (letter === 'M') letter = 'D';
+                    function timeFunction() {
+                        setTimeout(function(){document.getElementById("1").setAttribute}, 500);
+                    }
+                    timeFunction()
+                }
+                else if (e.keyCode == 37) {
+                    if (letter === 'D') letter = 'M';
+                    else if (letter === 'V') letter = 'D'
+                    else if (letter === 'M') letter = 'V';
+                }
+
+    </script>
+</body>
+</html>

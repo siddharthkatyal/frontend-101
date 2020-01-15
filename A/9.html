@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="B-9.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="outer">
+        <div class="carousal"></div>
+        <div class="slider"></div>
+    </div>
+<script>
+    var total = 0;
+    var singlePage = 0;
+    while(total <= 0){
+        total = parseInt(prompt("Enter the total number of events (greater than 0): "));
+    }
+    while(singlePage <= 0 || singlePage > total){
+        singlePage = parseInt(prompt("Enter the number of events to be shown at a time (greater than 0 and less than total number of events): "));
+    }
+    var width = 90/singlePage;
+    var height = 15;
+    var fontSize = 10;
+    var noOfPages = 0;
+    var lastPage = 0;
+    if(total % singlePage != 0)
+    {
+        noOfPages = (total / singlePage) + 1;
+        lastPage = total % singlePage ;
+    }
+    else
+        noOfPages = (total / singlePage)
+    for(var i=0;i<noOfPages;i++){
+        var num = i+1
+        var class_name = 'c'+ num;
+        var new_container = document.createElement('div');
+        new_container.className = 'container ' + class_name;
+        for(var j=0;j<singlePage;j++){
+            var new_box = document.createElement('div');
+            new_box.className = 'box';
+            new_box.style.width = width + 'vw';
+            new_box.style.height = height + 'vw';
+            new_box.style.fontSize = fontSize + 'rem';
+            var number__of_box = i*singlePage + j + 1;
+            new_box.innerHTML = number__of_box;
+            new_container.appendChild(new_box);
+        }
+        document.getElementsByClassName("carousal")[0].appendChild(new_container);
+    }
+    var  lastPage = total % singlePage;
+    if( lastPage != 0){
+        var num = noOfPages + 1;
+        var class_name = 'c' + num;
+        var new_container = document.createElement('div');
+        new_container.className = 'container ' + class_name;
+        for(var i=0;i< lastPage;i++){
+            var new_box = document.createElement('div');
+            new_box.className = 'box';
+            new_box.style.width = width + 'vw';
+            new_box.style.height = height + 'vw';
+            new_box.style.fontSize = fontSize + 'rem';
+            var number__of_box = noOfPages * singlePage + i + 1;
+            new_box.innerHTML = number__of_box;
+            new_container.appendChild(new_box);
+        }
+        document.getElementsByClassName("carousal")[0].appendChild(new_container);
+    }
+
+    var slider = document.getElementsByClassName('slider')[0];
+        for ( i = 0; i < noOfPages; i++) {
+            let new_dot = document.createElement('div');
+            new_dot.className = "dot";
+            var num = i+1;
+            new_dot.id = num;
+            new_dot.setAttribute('onclick', 'on_click_change(this.id)');
+            slider.appendChild(new_dot);
+        }
+        document.querySelectorAll('.dot')[0].style.background = 'white';
+
+    var  activePage = 1;
+    container_animation_interval = setInterval(animation, 5000);
+    function animation(){
+        if( activePage < noOfPages){
+             activePage++;
+            var carousal = document.getElementsByClassName('carousal')[0];
+            carousal.style.transform = "translate(" + (-100*( activePage-1)) + "%)"; 
+            for(let i=0;i<noOfPages;i++){
+                if(i != ( activePage-1)){
+                    document.querySelectorAll('.dot')[i].style.background = 'none';
+                }
+                else{
+                    document.querySelectorAll('.dot')[i].style.background = 'white';           
+                }
+            }
+            clearInterval(container_animation_interval);
+            container_animation_interval = setInterval(animation, 5000);
+        }
+        else{
+             activePage = 0;
+            animation();
+        }
+    }   
+    function on_click_change(index){
+        var index_num = parseInt(index);
+        if ( activePage != index_num) {
+             activePage = index_num - 1;
+            animation();
+            clearInterval(container_animation_interval);
+            container_animaton_interval = setInterval(animation, 5000);
+        }
+    }
+</script>
+</body>
+</html>

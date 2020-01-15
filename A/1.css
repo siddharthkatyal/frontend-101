@@ -1,0 +1,161 @@
+@keyframes slideright {
+  0% {
+      left: 10.5%;
+    }
+    25% {
+      left: 22%;
+    }
+    50% {
+        left: 10.5%;
+    }
+    75% {
+        left: -2%;
+    }
+    100% {
+      left: 10.5% ;
+    }
+}
+@keyframes slideright3 {
+  0% {
+      left: 0%;
+    }
+  }
+@keyframes slideright1 {
+  0% {
+      left: 14.5%;
+    }
+    25% {
+      left: 29%;
+    }
+    50% {
+        left: 14.5%;
+    }
+    75% {
+        left: -2%;
+    }
+    100% {
+      left: 14.5% ;
+    }
+  }@keyframes slideright2 {
+    0% {
+        left: 23%;
+      }
+      25% {
+        left: 46%;
+      }
+      50% {
+          left: 23%;
+      }
+      75% {
+          left: -2%;
+      }
+      100% {
+        left: 23% ;
+      }
+  }
+  .flex-item {
+    list-style: none;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    background: tomato;
+    width: 25%;
+    margin-top: 10px; 
+    height: 200px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center; 
+  }
+  li:nth-child(6n+1)
+  {
+    animation: slideright    3s infinite ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(6n+2)
+  {
+    animation: slideright    3s infinite ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(6n+3)
+  {
+    animation: slideright    3s infinite ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(6n)
+  {
+    animation: slideright    3s infinite reverse ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(6n-1)
+  {
+   animation: slideright    3s infinite reverse ;
+   animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(6n-2)
+  {
+    animation: slideright    3s infinite reverse ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  @media (max-width:1200px)
+{
+  .flex-item{
+    width: 35%;
+  }
+  li:nth-child(4n)
+  {
+    animation: slideright1    3s infinite reverse ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(4n-1)
+  {
+    animation: slideright1    3s infinite reverse ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(4n+1)
+  {
+    animation: slideright1    3s infinite  ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(4n+2)
+  {
+    animation: slideright1    3s infinite  ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+}
+@media (max-width:900px)
+{
+  .flex-item{
+    width: 50%;
+  }
+  li:nth-child(2n)
+  {
+    animation: slideright2    3s infinite ;
+    animation-timing-function: cubic-bezier(0.50, 0.0, 0.50, 1);
+  }
+  li:nth-child(2n+1)
+  {
+    animation: slideright2    3s infinite reverse ;
+    animation-timing-function: cubic-bezier(0.1, 0.6, 0.2, 0.1);
+  }
+  }
+
+@media (max-width:500px)
+{
+  .flex-item{
+    width:100%;
+  }
+  li:nth-child(2n)
+  {
+    animation: slideright3   3s infinite ;
+    animation-play-state: paused;
+  }
+  li:nth-child(2n+1)
+  {
+    animation: slideright3   3s infinite ;
+    animation-play-state: paused;
+  }
+}
+
+

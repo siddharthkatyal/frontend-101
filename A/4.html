@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>X-factor</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .screen {
+                width: 325px;
+                height: 650px;
+                background:radial-gradient(circle at 0 5%, rgba(233,83,146,1), rgba(233,83,146,1) 15%, rgba(233,83,146,0) 40%),
+						radial-gradient(circle at 250px 100px, rgba(70,97,231,1), rgba(70,97,231,1) 8%, rgba(70,97,231,0) 40%),
+						radial-gradient(circle at 0px 25%, rgba(232,112,129,1), rgba(232,112,129,1) 30%, rgba(232,112,129,0) 62%),
+						radial-gradient(circle at 100% 100%, rgba(235,122,101,1), rgba(235,122,101,1) 3%, rgba(235,122,101,0) 30%),radial-gradient(circle at -5% 90%, rgba(239,190,175,1),rgba(239,190,175,0) 50%),
+						radial-gradient(circle at 100% 60%, rgba(233,148,156,1), rgba(233,148,156,0) 70%);
+                box-shadow: 0 0 5px 9.5px black; 
+                border-radius: 35px;
+                display: flex;
+                justify-content: center;
+            }
+             .bezzel{
+                width: 350px;
+                height: 680px;
+                background-color: lightgray;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            } 
+            .border {
+                width: 358px;
+                height: 688px;
+                background-color: black;
+                border-radius: 58px;
+                border: solid 4px grey;
+                box-shadow: 0 0 1px 1px black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            } 
+             .notch {
+                width: 180px;
+                height: 25px;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                background-color: black;
+                margin: -0.25px;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .speaker{
+                width: 55px;
+                height: 6px;
+                border-radius: 100px;
+                background-color: rgb(20, 20, 20);
+                position: relative;
+                top: -3px;
+                margin-left: 15px;
+            }
+            .camera {
+                width: 5px;
+                height: 5px;
+                border-radius: 100%;
+                background-color: rgb(58, 66, 129);
+                position: relative;
+                top: -3px;
+                margin-left: 15px;
+            }
+            .powerbutton {
+                width: 3px;
+                height: 85px;
+                background-color: grey;
+                position: relative;
+                top: -150px;
+                left: 1px;
+            }
+            .leftbuttons {
+                position: relative;
+                top: -150px;
+                left: -1px;
+            }
+            .ringerswitch{
+                width: 3px;
+                background-color: grey;
+                height: 30px;
+                margin-bottom: 20px;
+            }
+            .volumeup{
+                width: 3px;
+                background-color: grey;
+                height: 50px;    
+                margin-bottom: 10px;
+            }
+            .volumedown{
+                width: 3px;
+                background-color: grey;
+                height: 50px;    
+            }
+            .leftnotchcut {
+                height: 15px;
+			    width: 15px;
+		    	box-shadow: 6px -6px 0 1px #000;
+	    		border-radius: 50%;
+                transform: rotate(-2deg);
+    			position: relative;
+                left: -133px;
+                top: -3.9px;
+            }
+            .rightnotchcut {
+                height: 15px;
+			    width: 15px;
+		    	box-shadow: 6px -6px 0 1px #000;
+	    		border-radius: 50%;
+                transform: rotate(-2deg);
+    			position: relative;
+                left: -133px;
+                top: -5px;
+                left: 44px;
+	    		top: -3.9px;
+		    	transform: rotateY(180deg);
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="leftbuttons">
+            <div class="ringerswitch"></div>
+            <div class="volumeup"></div>
+            <div class="volumedown"></div>
+        </div>
+        <div class="border">
+            <div class="bezzel">
+                <div class="screen">
+                    <div class="notch">
+                        <div class ="speaker"></div>
+                        <div class="camera"></div>
+                        <div class="leftnotchcut"></div>
+                        <div class="rightnotchcut"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="powerbutton"></div>
+    </body>
+</html>
