@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="8.css" rel="stylesheet" type="text/css">
+    <title>form validator</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="form">
+            <div class="first-name">
+                FIRST NAME
+                <span class="star">*</span><br>
+                <span class="red r1">!</span>
+                    <input class="first-name-space" type="text" name="first-name" value="firstname" oninput="first_name()">
+            </div>
+            <div class="last-name">
+                LAST NAME            
+                <span class="star">*</span><br>
+                <span class="red r2">!</span>
+                <input class="last-name-space" type="text" name="last-name" value="lastname" oninput="last_name()">
+            </div>
+            <div class="email">
+                E-MAIL
+                <span class="star">*</span><br>
+                <span class="red r3">!</span>
+                <input class="email-space" type="email" name="email" value="email" oninput="email()">
+            </div>
+            <div class="phone">
+                PHONE
+                <span class="star">*</span><br>
+                <span class="red r4">!</span>
+                <input class="phone-space" type="tel" name="phone" value="contact" oninput="phone()">
+            </div>
+            <div class="password">
+                PASSWORD
+                <span class="star">*</span>
+                <span id="password_constraints"></span><br>
+                <span class="red r5">!</span>
+                <input class="password-space" type="password" name="password" value="********" oninput="password()">
+            </div>
+        
+            <div class="events">
+                Events for Participation 
+                <span class="star">*</span><br>
+                <select name="participation_events" class="events_select" onclick="events()">
+                    <option value="Event 1" selected>Event 1</option>
+                    <option value="Event 2">Event 2</option>
+                    <option value="Event 3">Event 3</option>        
+                </select>
+            </div>
+            <div class="gender-wrapper">
+                Gender<br>
+                <select name="gender" class="gender" onclick="gender()">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other" selected>Prefer not to tell</option>
+                </select>
+            </div>
+            <div class="year-wrapper">
+                Year of Study<br>
+                <select name="year_of_study" class="year" onclick="year()">
+                    <option value="First" selected>First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                    <option value="Fourth">Fourth</option>
+                    <option value="Fifth">Fifth</option>
+                </select>
+            </div>
+            <div class="button" onclick="submit()">
+                    SUBMIT
+            </div>
+        </div>
+    </div>
+</body>
+<script src="8.js"></script>
+</html>

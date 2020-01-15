@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>B2</title>
+	<link rel="stylesheet" type="text/css" href="b2.css">
+</head>
+<body>
+    <h1>checkbox</h1>
+    <input type="checkbox"  id="a" class="items">
+    <label for="a">A</label><br>
+    <input type="checkbox"  id="b" class="items">
+    <label for="b">B</label><br>
+    <input type="checkbox"  id="c" class="items">
+    <label for="c">C</label><br>
+    <input type="checkbox"  id="d" class="items">
+    <label for="d">D</label><br>
+    <input type="checkbox"  id="e" class="items">
+    <label for="e">E</label><br>
+    <input type="checkbox"  id="f" class="items">
+    <label for="f">F</label><br>
+    <input type="checkbox"  id="g" class="items">
+    <label for="g">G</label>
+    <script>
+        var start;
+        var end;
+        var ar = [0,0,0,0,0,0,0];
+        var ar2 = [0,0,0,0,0,0,0];
+        var listitems = document.getElementsByClassName("items");
+        document.addEventListener("click",function(){
+            for (var i = 0; i < listitems.length; i++) {
+                if (listitems[i].checked) {
+                    ar2[i]=1;
+                }
+                else{
+                    ar2[i]=0;
+                }
+                if(ar[i]!=ar2[i])
+                {
+                    start=end;
+                    end=i;
+                    ar[i]=ar2[i];
+                }
+            };
+        });
+        window.addEventListener("keyup",function(e){  
+                if(e.which == 16)
+                    {
+                        if(start<end){
+                            for(var j=start+1;j<end;j++)
+                            {
+                                if(ar[j]==0){
+                                    ar[j]=1;
+                                    ar2[j]=1;
+                                    listitems[j].checked=true;
+                                }
+                                else{
+                                    ar[j]=0;
+                                    ar2[j]=0;
+                                    listitems[j].checked=false;
+                                }
+                            }
+                        }
+                        else{
+                            for(var j=end+1;j<start;j++)
+                            {
+                                if(ar[j]==0){
+                                    ar[j]=1;
+                                    ar2[j]=1;
+                                    listitems[j].checked=true;
+                                }
+                                else{
+                                    ar[j]=0;
+                                    ar2[j]=0;
+                                    listitems[j].checked=false;
+                                }
+                            }
+                        }
+                    }
+        });
+    </script>
+</body>
+</html>

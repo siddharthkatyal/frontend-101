@@ -1,0 +1,72 @@
+<DOCTYPE! html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="6.css">
+  <title>profile fetcher</title>
+  </head>
+  <body>
+    <input type="text" id="name" name="name">
+    <button onclick="fetchapi()">fetch api</button>
+    <button onclick="jqueryajax()">jquery/ajax</button>
+    <button onclick="xmlhttpreq()">xmlhttprequest</button>
+    <div class = "container">
+      <div id= "avatar"></div>
+      <div id= "username"></div>
+      <div id= "bio"></div>
+    </div>        
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+      function fetchapi(){
+        fetch("https://api.github.com/users/" + document.getElementById("name").value)
+        .then(res => { return res.json()})
+        .then(data => {
+          if(data.name!=undefined)
+          {
+            document.getElementById("avatar").style.backgroundImage = 'url("' + data.avatar_url + '")';
+            document.getElementById("username").innerHTML = data.name;
+            document.getElementById("bio").innerHTML = data.bio;   
+          }
+        })
+        .catch(err => console.error(err));
+        document.getElementById("name").value="";
+      }
+
+      function jqueryajax(){
+        $.ajax({
+          url: `https://api.github.com/users/` + document.getElementById("name").value,
+          type: 'GET',
+          success: function(data) {
+            if(data.name!=undefined)
+            {
+              document.getElementById("avatar").style.backgroundImage = 'url("' + data.avatar_url + '")';
+              document.getElementById("username").innerHTML = data.name;
+              document.getElementById("bio").innerHTML = data.bio;   
+            }
+          }
+        });
+        document.getElementById("name").value="";
+      }
+
+      function xmlhttpreq(){
+        var request = new XMLHttpRequest();
+        request.open('GET', `https://api.github.com/users/` + document.getElementById("name").value, true);
+        request.send();
+        request.responseType= 'json';
+        request.onload = function () {
+            var data = this.response;
+            if(data.name!=undefined)
+            {
+              document.getElementById("avatar").style.backgroundImage = 'url("' + data.avatar_url + '")';
+              document.getElementById("username").innerHTML = data.name;
+              document.getElementById("bio").innerHTML = data.bio;   
+            }
+        }
+        request.onerror = function(){
+            console.log('error');
+        }
+      }
+    </script>
+  </body>
+  </html>

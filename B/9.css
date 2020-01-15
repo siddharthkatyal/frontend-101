@@ -1,0 +1,50 @@
+html,body {
+  padding: 0;
+  margin: 0;
+}
+.outer{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blueviolet;
+}
+.carousal{
+    width: 100%;
+    padding: 76px 0;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform 0.75s ease-in;
+}
+.page{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 100%;
+}
+.box{
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.slider{
+    text-align: center;
+    margin: 32px 0;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border: 3.5px solid #ffffff;
+    margin: 3px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.75s;
+}

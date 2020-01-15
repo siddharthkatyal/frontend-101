@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+}
+.star{
+    color: red;
+}
+.outer{
+    position: relative;
+   
+}
+.form{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.first-name{
+    top: -20px;
+    position: absolute;
+    font-size: 20px;
+    width: auto;
+}
+.first-name-space:hover{
+    background-color: lightgray;
+    border-color: blue;
+}
+.first-name-space{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    left: 0;
+    top: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+    color: grey;
+}
+.last-name{
+    top: -20px;
+    position: absolute;
+    font-size: 20px;
+    width: auto;
+    left: 240px;
+}
+.last-name-space:hover{
+    background-color: lightgray;
+    border-color: blue;
+}
+.last-name-space{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    left: 0;
+    top: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+    color: grey;
+}
+.email{
+    top: 75px;
+    position: absolute;
+    font-size: 20px;
+    width: auto;
+}
+.email-space:hover{
+    background-color: lightgray;
+    border-color: blue;
+}
+.email-space{
+    position: relative;
+    width: 440px;
+    height: 50px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    left: 0;
+    top: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+    color: grey;    
+
+}
+.phone{
+    top: 170px;
+    position: absolute;
+    font-size: 20px;
+    width: auto;
+}
+.phone-space:hover{
+    background-color: lightgray;
+    border-color: blue;
+}
+.phone-space{
+    position: relative;
+    width: 440px;
+    height: 50px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    left: 0;
+    top: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+    color: grey;
+}
+.password{
+    top: 265px;
+    position: absolute;
+    font-size: 20px;
+    width: auto;
+}
+.password-space:hover{
+    background-color: lightgray;
+    border-color: blue;
+}
+#password_constraints{
+    font-size: 20px;
+    padding-left: 10px;
+    color: red;
+}
+.password-space{
+    position: relative;
+    width: 440px;
+    height: 50px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    left: 0;
+    top: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+    color: grey;
+}
+
+.red{
+    position: absolute;
+    z-index: 0;
+    right: 20px;
+    color: red;
+    font-size: 27px;
+    text-align: center;
+    line-height: 30px;
+    top: 45px;
+    height: 30px;
+    width: 30px;
+}
+.events{
+    position: absolute;
+    top: 360px;
+    height: auto;
+    width: auto;
+    font-size: 25px;    
+}
+.events_select:hover{
+    background-color: lightgray;
+    border-color: blue;
+}
+.events_select{
+    font-size: 20px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: grey;
+    height: 40px;
+    width: 260px;
+    margin-top: 5px;
+}
+.gender-wrapper{
+    position: absolute;
+    left: 300px;
+    top: 360px;
+    height: auto;
+    width: auto;
+    font-size: 25px;    
+}
+.gender{
+    font-size: 20px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: grey;
+    height: 40px;
+    width: 160px;
+    margin-top: 5px;
+}
+.gender:hover{
+    background-color: lightgray;
+    border-color: blue;
+}
+.year-wrapper{
+    position: absolute;
+    top: 440px;
+    height: auto;
+    width: auto;
+    font-size: 25px;    
+}
+.year{
+    font-size: 20px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: grey;
+    height: 40px;
+    width: 240px;
+    margin-top: 5px;
+}
+.year:hover{
+    background: lightgray;
+    border-color: blue;
+}
+.button{
+    box-sizing: border-box;
+    position: absolute;
+    height: 60px;
+    width: 180px;
+    font-size: 30px;
+    line-height: 56px;
+    text-align: center;
+    border: 2px solid black;
+    top: 460px;
+    left:280px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: lightgray;
+    border-color: blue;
+}

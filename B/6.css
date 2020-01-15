@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+.avatar{
+    width: 250px;
+    height: 250px;
+    background-size: cover; 
+
+}
+.name{
+    width:  500px;
+    height : 50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.bio{
+    width:500px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}

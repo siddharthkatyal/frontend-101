@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+#clock{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left:36vw;
+    top:22vh;
+    background-color: rgb(54, 224, 119);
+    border-style: solid;
+    border-radius: 50%;
+    border-color: red;
+    border-width: 10px;
+}
+#hourhand{
+    position: absolute;
+    height: 160px;
+    width: 12px;
+    left: calc(260px - 6px + 36vw);
+    top: calc(22vh + 260px - 160px);
+    background-color: black;
+    z-index: 10;
+}
+#minutehand{
+    position: absolute;
+    height: 180px;
+    width: 9px;
+    left: calc(260px - 4.5px + 36vw);
+    top: calc(22vh + 260px - 180px);
+    background-color: black;
+    z-index: 10;
+}
+#sechand{
+    position: absolute;
+    height: 220px;
+    width: 6px;
+    left: calc(260px - 3px + 36vw);
+    top: calc(22vh + 260px - 220px);
+    background-color: black;
+    z-index: 10;
+}
