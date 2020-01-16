@@ -35,5 +35,5 @@
         - Making the classic game 2048 with VanillaJS
     - [B8 : Form Validator](https://siddharthkatyal.github.io/frontend-101/B/8.html)
         - Creating a simple form validator using regular expressions
-    - [B9 : Cusstom Carousel}(https://siddharthkatyal.github.io/frontend-101/B/9.html)
+    - [B9 : Cusstom Carousel](https://siddharthkatyal.github.io/frontend-101/B/9.html)
        - carousel which takes total number of elements and number of elements to be shown at a time and shows the required carousel
